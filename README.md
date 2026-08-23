@@ -20,6 +20,7 @@ package main
 import (
 	"solod.dev/so/c"
 	"solod.dev/so/fmt"
+	"solod.dev/so/os"
 	"solod.dev/sqlite/libsqlite3"
 )
 
@@ -27,7 +28,7 @@ func main() {
 	var db *libsqlite3.Sqlite3
 	if rc := libsqlite3.Open(":memory:", &db); rc != libsqlite3.SQLITE_OK {
 		fmt.Println("Can't open database:", c.String(libsqlite3.Errmsg(db)))
-		return
+		os.Exit(1)
 	}
 	defer libsqlite3.Close(db)
 	fmt.Println("SQLite version:", c.String(libsqlite3.Libversion()))
