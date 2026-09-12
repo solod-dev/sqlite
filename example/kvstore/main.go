@@ -2,6 +2,7 @@
 //
 // Usage:
 //
+//	make example name=kvstore
 //	./build/kvstore -db build/kvstore.db -op set -key name -val alice
 //	./build/kvstore -db build/kvstore.db -op get -key name
 //	./build/kvstore -db build/kvstore.db -op del -key name

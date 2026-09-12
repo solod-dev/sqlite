@@ -3,6 +3,7 @@
 //
 // Usage:
 //
+//	make example name=simple
 //	./build/simple build/simple.db "create table data(message text)"
 //	./build/simple build/simple.db "insert into data values('Hello, World!')"
 //	./build/simple build/simple.db "select * from data"
